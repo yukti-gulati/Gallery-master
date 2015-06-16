@@ -267,6 +267,7 @@ The plugin supports these events:
 This event is triggered when the star rating is modified or changed. This event also allows you to access these parameters:
 
 - `value`: the selected rating value  
+- https://github.com/yukti-gulati/Gallery-master
 - `caption`: the caption for the selected rating
 
 **Example:**
