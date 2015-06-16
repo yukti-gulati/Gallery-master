@@ -1,0 +1,52 @@
+package com.example.zte;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+
+
+
+
+public class front extends Activity implements OnClickListener {
+	private TextView t1,t2,t3,t4;
+	@Override
+public void onCreate(Bundle savedInstanceState) {
+	// TODO Auto-generated method stub
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.front);
+	t1 = (TextView) findViewById(R.id.mp1);
+	   t1.setOnClickListener(this);
+	   t2 = (TextView) findViewById(R.id.id1);
+	   t2.setOnClickListener(this);
+	   t3 = (TextView) findViewById(R.id.fp1);
+	   t3.setOnClickListener(this);
+	   t4 = (TextView) findViewById(R.id.tab1);
+	   t4.setOnClickListener(this);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch(v.getId()){
+		case R.id.mp1:
+			Intent asd=new Intent(this,AndroidTabLayoutActivity.class);
+			startActivity(asd);
+			break;
+		case R.id.id1:
+			Intent asd1=new Intent(this,internetdevices.class);
+			startActivity(asd1);
+			break;
+		case R.id.fp1:
+			Intent asd2=new Intent(this,featurephones.class);
+			startActivity(asd2);
+			break;
+		case R.id.tab1:
+			Intent asd3=new Intent(this,tablets.class);
+			startActivity(asd3);
+			break;
+	}
+}
+}
